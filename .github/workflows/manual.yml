@@ -33,7 +33,7 @@ jobs:
       on:
       push:
       branches:
-      -main:
+      - main
 name: Install requirements
 run:
 - pip install --upgrade pip
