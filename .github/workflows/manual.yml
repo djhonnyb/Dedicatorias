@@ -30,21 +30,4 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       run: echo "Hello ${{ inputs.name }}"
-      on:
-      push:
-      branches:
-      - main
-name: Install requirements
-run:
-- pip install --upgrade pip
-- pip install -r requirements.txt
-run:
-- mkdir -p public/app
--cp -r ./* app/
-name: Build App
-run:
-- cd app
-- firebase deploy --only hosting
-name: Test it out
-run:
-- firebase open
+     
